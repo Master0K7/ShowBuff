@@ -62,6 +62,10 @@ public class ShowBuffSettings : ISettings
     [Menu("Buff Settings")] public EmptyNode BuffsHeader { get; set; } = new EmptyNode();
 
     public List<ShowBuffSetting> BuffSettings { get; set; } = new List<ShowBuffSetting>();
+
+    [Menu("Show All Buffs Window", "Open separate window with search, sort and all detected buffs with Type values")]
+    public ToggleNode ShowAllBuffsWindow { get; set; } = new ToggleNode(false);
+    
+    [Menu("Freeze Buff List", "Stop updating detected buffs list (useful for catching short-duration buffs)")]
+    public ToggleNode FreezeBuffList { get; set; } = new ToggleNode(false);
 }
-
-
